@@ -3,9 +3,9 @@ import Link from "next/link";
 
 const Footer = () => {
     return(
-        <Footer>
+        <footer>
 
-        </Footer>
+        </footer>
     )
 }
 

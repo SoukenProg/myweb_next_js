@@ -3,9 +3,13 @@ import Link from "next/link";
 
 export const Header = () => {
     return(
-        <Header>
-
-        </Header>
+        <header>
+            <div className="flex lg:flex-1  ">
+                <Link href="/"　className="text-2xl font-logo">
+                    Souken521
+                </Link>
+            </div>
+        </header>
     )
 }
 

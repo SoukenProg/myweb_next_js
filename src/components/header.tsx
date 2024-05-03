@@ -27,18 +27,18 @@ export const Header = () => {
                 </div>
                 <div className="flex mx-4 md:flex-1 md:gap-x-12 justify-end">
                     <Link href="/" className="font-semibold">Home</Link>
-                    <Link href="/" className="font-semibold">About</Link>
-                    <Link href="/" className="font-semibold">Projects</Link>
-                    <Link href="/" className="font-semibold">Blog</Link>
+                    <Link href="/About" className="font-semibold">About</Link>
+                    <Link href="/Works" className="font-semibold">Works</Link>
+                    <Link href="/Contact" className="font-semibold">Contact</Link>
                 </div>
             </div>
-            <div className="md:hidden flex justify-between max-w-3xl  mx-3">
+            <div className="md:hidden flex justify-between max-w-3xl items-center mx-3">
                 <div>
-                    <Link href="/" className="text-5xl">
+                    <Link href="/" className="text-4xl">
                         Souken521
                     </Link>
                 </div>
-                <div className="text-xl font-bold">
+                <div className="text-xl font-bold　items-center">
                     <BurgerMenu />
                 </div>
             </div>

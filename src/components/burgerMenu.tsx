@@ -60,13 +60,13 @@ export default function BurgerMenu() {
                             <Link href="/" className="font-semibold">Home</Link>
                         </li>
                         <li className="mb-4">
-                            <Link href="/" className="font-semibold">About</Link>
+                            <Link href="/About" className="font-semibold">About</Link>
                         </li>
                         <li className="mb-4">
-                            <Link href="/" className="font-semibold">Projects</Link>
+                            <Link href="/Works" className="font-semibold">Works</Link>
                         </li>
                         <li className="mb-4">
-                            <Link href="/" className="font-semibold">Link</Link>
+                            <Link href="/Contact" className="font-semibold">Contact</Link>
                         </li>
                     </ul>
                 </main>

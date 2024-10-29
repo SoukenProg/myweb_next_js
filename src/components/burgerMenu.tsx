@@ -12,6 +12,7 @@ export default function BurgerMenu() {
         <div id="outer-container">
                 <main id="page-wrap">
                     <ul className="flex flex-col">
+                        {openMenu}
                         <div className={"bg-white"} onClick={() => menuFunction()}>
                             <span></span>
                             <span></span>

@@ -2,14 +2,15 @@
 const nextConfig = {
     reactStrictMode: true,
     swcMinify: true,
-    webpack: (config, context) => {
-        config.watchOptions = {
-            poll: 1000,
-            aggregateTimeout: 300
-        }
-        return config
-    }
-}
-
+    webpack: (config,{dev}) => {
+      if(dev){
+          config.watchOptions = {
+              poll: 200,
+              aggregateTimeout: 200,
+          };
+      }
+        return config;
+    },
+};
 
 export default nextConfig;

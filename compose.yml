@@ -6,14 +6,29 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+    tty: true
     ports:
-        - "12000:3000"
-        - "9229:9229"
+      - "12000:3000"
     volumes:
       - .:/app
       - node_modules:/app/node_modules
-    command: >
-      sh -c "npm run dev"
-      sh -c "npm run storybook"
+    command: npm run dev
+    environment:
+      - NODE_ENV=development
+      - WATCHPACK_POLLING=true
+
+  storybook:
+    image: node:alpine
+    container_name: SoukenWEB-Storybook
+    build:
+      context: .
+      dockerfile: Dockerfile
+    tty: true
+    ports:
+      - "6006:6006"
+    volumes:
+      - .:/app
+      - node_modules:/app/node_modules  # 修正されたパス
+    command: npm run storybook
 volumes:
   node_modules:

@@ -6,6 +6,26 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --font-mono: ui-monospace,
+  Menlo,Monaco,"Cascadia Mono",
+  "Segoe UI　Mono","Roboto Mono","Oxygen Mono",
+  "Ubuntu Monospace","Source Code Pro",
+  "Fira Mono","Droid Sans Mono","Courier New", monospace;
+  --color-text-main: #333;
+  --color-text-dark: #ccc;
+  --color-text-sub: #999;
+  --color-text-unpainted: #fff;
+  --color-text-error: #f33;
+  --color-bg-dark: #000;
+  --color-bg-sub: #f3f3f3;
+  --color-bg-code: #fafafa;
+  --color-bg-painted: #333;
+  --color-border-dark: #333;
+  --color-border: #ddd;
+  --color-border-darker: #aaa;
+  --color-border-light: #f3f3f3;
+  --color-current: #eee;
+  --color-button-primary: #333;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -16,15 +36,15 @@
   }
 }
 
-/*body {*/
-/*  color: rgb(var(--foreground-rgb));*/
-/*  background: linear-gradient(*/
-/*      to bottom,*/
-/*      transparent,*/
-/*      rgb(var(--background-end-rgb))*/
-/*    )*/
-/*    rgb(var(--background-start-rgb));*/
-/*}*/
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+html,
+body {
+
+}
 
 @layer utilities {
   .text-balance {

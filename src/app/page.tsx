@@ -7,6 +7,7 @@ export default function Home() {
         <div className={styles.top}>
             <h1 className={styles.title}>Souken521</h1>
         </div>
+        <Image className={styles.bgimg} src="/index_BG.png" alt={""} width={4000} height={1200} />
       <div className="italic max-w-5xl w-full items-center justify-between font-mono text-m lg:flex">
         Coming Soon...
       </div>

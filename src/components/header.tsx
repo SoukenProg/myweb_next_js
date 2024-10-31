@@ -18,7 +18,7 @@ export const Header = () => {
         //     </div>
         // </header>
 
-    <header className="w-full sticky top-0">
+    <header className="w-full bg-white sticky top-0">
             <div className="hidden md:flex justify-between min-w-3xl items-center mx-3">
                 <div className="flex md:flex-1 mr-auto items-center gap-3">
                     <Link href="/" className="text-5xl">

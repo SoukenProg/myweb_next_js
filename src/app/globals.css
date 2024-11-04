@@ -26,6 +26,8 @@
   --color-border-light: #f3f3f3;
   --color-current: #eee;
   --color-button-primary: #333;
+  --border-radius: 4px;
+
 }
 
 @media (prefers-color-scheme: dark) {
@@ -33,6 +35,13 @@
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
+    --color-text-main: #ddd;
+    --color-text-dark: #222;
+    --color-text-sub: #777;
+  }
+  body {
+    background-color: #000;
+    color: #fff;
   }
 }
 

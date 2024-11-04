@@ -1,14 +1,14 @@
-import styles from "@/app/works.module.css";
+import styles from "@/app/blog.module.css";
 import Image from "next/image";
 import Link from "next/link";
 import {useRouter} from "next/router";
 import Button from "@/stories/Button/button";
-import {workDescription} from "@/app/libs/microcms_works";
+import {blogDescription} from "@/app/libs/microcms_blogs";
 
-const works:{
-    workList: workDescription[]
+const blogs:{
+    blogList: blogDescription[]
 } ={
-    workList: [
+    blogList: [
         {
             id:"0",
             title:"テスト0",
@@ -39,29 +39,29 @@ const works:{
     ],
 };
 
-export default function Works() {
-    const slices = works.workList.slice(0,2);
+export default function Blogs() {
+    const slices = blogs.blogList.slice(0,2);
     return(
       <main className="flex min-h-screen flex-col items-center justify-between p-0">
               <div className={styles.top}>
-                  <h1 className={styles.title}>Souken521.works</h1>
+                  <h1 className={styles.title}>Souken521.Blog</h1>
               </div>
-              <Image className={styles.bgimg} src="/works_BG.png" alt={""} width={4000} height={1200}/>
+              <Image className={styles.bgimg} src="/blog_BG.png" alt={""} width={4000} height={1200}/>
 
-              <div className={styles.works}>
-                  <h2 className={styles.worksTitle}>WORKS</h2>
+              <div className={styles.blogs}>
+                  <h2 className={styles.blogTitle}>ARTICLES</h2>
                   <ul>
-                      {slices.map(( workElms) => (
-                          <li key={workElms.id} className={styles.worksList}>
-                                <Link href={`/news/${workElms.id}`} className={styles.link}>
+                      {slices.map(( blogElms) => (
+                          <li key={blogElms.id} className={styles.blogsList}>
+                                <Link href={`/news/${blogElms.id}`} className={styles.link}>
                                     <Image className={styles.image} src="/noImage.png" alt="No Image" width={1600} height={1200}/>
                                     <dl className={styles.content}>
-                                        <dt className={styles.worksItemTitle}>{workElms.title}</dt>
+                                        <dt className={styles.blogItemTitle}>{blogElms.title}</dt>
                                             <dd className={styles.meta}>
                                                 <span className={styles.tag}>
-                                                    {workElms.category.name}
+                                                    {blogElms.category.name}
                                                 </span>
-                                                <span className={styles.date}>{workElms.releasedate}</span>
+                                                <span className={styles.date}>{blogElms.releasedate}</span>
                                             </dd>
                                     </dl>
                                 </Link>
@@ -73,7 +73,7 @@ export default function Works() {
                   </div>
               </div>
           <h1>
-              (this is Works Page.)
+              (this is Blog Page.)
           </h1>
           </main>
   );

@@ -21,21 +21,21 @@
     height: 600px;
     z-index: -1;
 }
-.works{
+.blogs{
     position: relative;
     background: #fff;
     width: 75%;
     margin: 2.5% auto 0;
 
 }
-.worksTitle{
+.blogTitle{
     font-size: 2rem;
     text-align: center;
 }
-.worksList{
+.blogList{
     border-bottom: 1px solid var(--color-border-light);
-}.worksList:last-child{
-    border-bottom: none;
+}.blogList:last-child{
+     border-bottom: none;
  }
 
 .link{
@@ -50,7 +50,7 @@
     height: auto;
 }
 
-.worksItemTitle{
+.blogItemTitle{
     font-size: 2rem;
     font-weight: bold;
     margin-bottom: 0.5rem;
@@ -87,7 +87,7 @@
     .top{
         color: #ccc;
     }
-    .works{
+    .blogs{
         background: #000;
     }
     .tag{

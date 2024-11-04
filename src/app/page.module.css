@@ -21,3 +21,33 @@
     height: 600px;
     z-index: -1;
 }
+
+@media (max-width: 640px) {
+    .top{
+
+        padding: 120px 16px;
+    }
+    .title{
+        font-size: 3rem;
+    }
+    .bgimg{
+        position: absolute;
+        top: 1.5rem;
+        right: 0;
+        width: auto;
+        height: 600px;
+        z-index: -1;
+    }
+}
+@media (prefers-color-scheme: dark) {
+    .top{
+        color: #ccc;
+    }
+    .tag{
+        background-color: var(--color-bg-sub);
+        color: #333;
+        padding: 1rem 3rem;
+        white-space: nowrap;
+        font-size: 1.5rem;
+    }
+}

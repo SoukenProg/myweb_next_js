@@ -1,0 +1,7 @@
+.tag{
+    background-color: var(--color-bg-sub);
+    padding: 1rem 3rem;
+    border-radius: var(--border-radius);
+    white-space: nowrap;
+    font-size: 1.5rem;
+}

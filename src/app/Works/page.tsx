@@ -1,6 +1,7 @@
 import styles from "@/app/works.module.css";
 import Image from "next/image";
-
+import {useRouter} from "next/router";
+import Button from "@/stories/Button/button";
 type workDescription = {
     id: string;
     title: string;
@@ -43,21 +44,43 @@ const works:{
         },
     ],
 };
+
 export default function Works() {
+    const slices = works.workList.slice(0,2);
     return(
       <main className="flex min-h-screen flex-col items-center justify-between p-0">
-          <main className="flex min-h-screen flex-col items-center justify-between p-24">
               <div className={styles.top}>
                   <h1 className={styles.title}>Souken521.works</h1>
               </div>
               <Image className={styles.bgimg} src="/works_BG.png" alt={""} width={4000} height={1200}/>
-              <div className="italic max-w-5xl w-full items-center justify-between font-mono text-m lg:flex">
-                  Coming Soon...
+
+              <div className={styles.works}>
+                  <h2 className={styles.worksTitle}>WORKS</h2>
+                  <ul>
+                      {slices.map(( workElms) => (
+                          <li key={workElms.id} className={styles.worksList}>
+                                <div className={styles.link}>
+                                    <Image className={styles.image} src="/noImage.png" alt="No Image" width={1600} height={1200}/>
+                                    <dl className={styles.content}>
+                                        <dt className={styles.worksItemTitle}>{workElms.title}</dt>
+                                            <dd className={styles.meta}>
+                                                <span className={styles.tag}>
+                                                    {workElms.category.name}
+                                                </span>
+                                                <span className={styles.date}>{workElms.releasedate}</span>
+                                            </dd>
+                                    </dl>
+                                </div>
+                          </li>
+                      ))}
+                  </ul>
+                  <div>
+                      <Button className={styles.moreButton} href={'#'}>More</Button>
+                  </div>
               </div>
-          </main>
           <h1>
               (this is Works Page.)
           </h1>
-      </main>
+          </main>
   );
 }

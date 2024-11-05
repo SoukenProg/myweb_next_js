@@ -4,6 +4,8 @@ import Link from "next/link";
 import {useRouter} from "next/router";
 import Button from "@/stories/Button/button";
 import {blogDescription} from "@/app/libs/microcms_blogs";
+import Category from "@/components/Category";
+import Date from "@/components/Date";
 import Hero from "@/components/Hero";
 
 const blogs:{
@@ -55,10 +57,8 @@ export default function Blogs() {
                                     <dl className={styles.content}>
                                         <dt className={styles.blogItemTitle}>{blogElms.title}</dt>
                                             <dd className={styles.meta}>
-                                                <span className={styles.tag}>
-                                                    {blogElms.category.name}
-                                                </span>
-                                                <span className={styles.date}>{blogElms.releasedate}</span>
+                                                <Category category={blogElms.category} />
+                                                <Date date={blogElms.releasedate} />
                                             </dd>
                                     </dl>
                                 </Link>

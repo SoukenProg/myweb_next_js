@@ -5,6 +5,8 @@ import {useRouter} from "next/router";
 import Button from "@/stories/Button/button";
 import {workDescription} from "@/app/libs/microcms_works";
 import Hero from "@/components/Hero";
+import Date from "@/components/Date";
+import Category from "@/components/Category";
 
 const works:{
     workList: workDescription[]
@@ -56,10 +58,8 @@ export default function Works() {
                                     <dl className={styles.content}>
                                         <dt className={styles.worksItemTitle}>{workElms.title}</dt>
                                             <dd className={styles.meta}>
-                                                <span className={styles.tag}>
-                                                    {workElms.category.name}
-                                                </span>
-                                                <span className={styles.date}>{workElms.releasedate}</span>
+                                                <Category category={workElms.category} />
+                                                <Date date={workElms.releasedate} />
                                             </dd>
                                     </dl>
                                 </Link>

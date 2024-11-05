@@ -1,7 +1,7 @@
 // 参考:https://tomoyuki65.com/how-to-develop-responsive-design-screens-with-nextjs13/
 import Image from "next/image";
 import Link from "next/link";
-import BurgerMenu from "@/components/burgerMenu";
+import BurgerMenu from "@/components/burgerMenu/burgerMenu";
 export const Header = () => {
     return (
         // <header className="flex items-center m-3">
@@ -33,7 +33,7 @@ export const Header = () => {
                     <Link href="/Contact" className="font-semibold">Contact</Link>
                 </div>
             </div>
-            <div className="md:hidden flex justify-between max-w-3xl items-center mx-3">
+            <div className="md:hidden flex  bg-white dark:bg-black justify-between max-w-3xl items-center mx-3">
                 <div>
                     <Link href="/" className="text-4xl">
                         Souken521

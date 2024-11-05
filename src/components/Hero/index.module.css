@@ -33,6 +33,11 @@
         font-size: 5rem;
     }
 }
+@media (min-width:641px) and  (max-width: 800px) {
+    .title {
+        font-size: 4rem;
+    }
+}
 @media (max-width: 640px) {
     .title {
         font-size: 3rem;

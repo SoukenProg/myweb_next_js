@@ -4,6 +4,7 @@ import Link from "next/link";
 import {useRouter} from "next/router";
 import Button from "@/stories/Button/button";
 import {workDescription} from "@/app/libs/microcms_works";
+import Hero from "@/components/Hero";
 
 const works:{
     workList: workDescription[]
@@ -43,10 +44,7 @@ export default function Works() {
     const slices = works.workList.slice(0,2);
     return(
       <main className="flex min-h-screen flex-col items-center justify-between p-0">
-              <div className={styles.top}>
-                  <h1 className={styles.title}>Souken521.works</h1>
-              </div>
-              <Image className={styles.bgimg} src="/works_BG.png" alt={""} width={4000} height={1200}/>
+          <Hero imagePath={"/works_BG.png"} title={"Souken521.works"} />
 
               <div className={styles.works}>
                   <h2 className={styles.worksTitle}>WORKS</h2>

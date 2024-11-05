@@ -4,6 +4,7 @@ import Link from "next/link";
 import {useRouter} from "next/router";
 import Button from "@/stories/Button/button";
 import {blogDescription} from "@/app/libs/microcms_blogs";
+import Hero from "@/components/Hero";
 
 const blogs:{
     blogList: blogDescription[]
@@ -43,11 +44,7 @@ export default function Blogs() {
     const slices = blogs.blogList.slice(0,2);
     return(
       <main className="flex min-h-screen flex-col items-center justify-between p-0">
-              <div className={styles.top}>
-                  <h1 className={styles.title}>Souken521.Blog</h1>
-              </div>
-              <Image className={styles.bgimg} src="/blog_BG.png" alt={""} width={4000} height={1200}/>
-
+                <Hero imagePath={"/blog_BG.png"} title={"Souken521.Blog"} />
               <div className={styles.blogs}>
                   <h2 className={styles.blogTitle}>ARTICLES</h2>
                   <ul>

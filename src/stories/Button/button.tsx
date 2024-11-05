@@ -9,7 +9,7 @@ type ButtonProps = {
     className?: string;
 };
 
-const Button: React.FC<ButtonProps> = ({ href, children,color = 'default', className }) => {
+const Button: React.FC<ButtonProps> = ({ href="#", children,color = 'default', className }) => {
     return (
         <Link href={href} className={　`${styles.button} ${styles[color]} ${className ? className : ''}`}>
                 {children}

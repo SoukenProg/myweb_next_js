@@ -1,5 +1,5 @@
 import styles from "./index.module.css";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import Button from "@/stories/Button/button";
 import Category from "@/components/Category";
 import Date from "@/components/Date";

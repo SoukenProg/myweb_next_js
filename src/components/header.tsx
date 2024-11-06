@@ -1,5 +1,5 @@
 // 参考:https://tomoyuki65.com/how-to-develop-responsive-design-screens-with-nextjs13/
-import Image from "next/image";
+import Image from "next/legacy/image";
 import Link from "next/link";
 import BurgerMenu from "@/components/burgerMenu/burgerMenu";
 export const Header = () => {
@@ -18,7 +18,7 @@ export const Header = () => {
         //     </div>
         // </header>
 
-    <header className="w-full bg-white sticky top-0 py-1 dark:bg-black dark:text-white">
+        (<header className="w-full bg-white sticky top-0 py-1 dark:bg-black dark:text-white">
             <div className="hidden md:flex justify-between min-w-3xl items-center mx-3">
                 <div className="flex md:flex-1 mr-auto items-center gap-3">
                     <Link href="/" className="text-5xl">
@@ -43,8 +43,8 @@ export const Header = () => {
                     <BurgerMenu />
                 </div>
             </div>
-    </header>
-)
+        </header>)
+    );
 }
 
 export default Header;

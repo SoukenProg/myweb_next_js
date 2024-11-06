@@ -53,7 +53,7 @@ export default function Works() {
                   <ul>
                       {slices.map(( workElms) => (
                           <li key={workElms.id} className={styles.worksList}>
-                                <Link href={`/news/${workElms.id}`} className={styles.link}>
+                                <Link href={`/news/${workElms.id}`} className={styles.link} passHref>
                                     <Image className={styles.image} src="/noImage.png" alt="No Image" width={1600} height={1200}/>
                                     <dl className={styles.content}>
                                         <dt className={styles.worksItemTitle}>{workElms.title}</dt>

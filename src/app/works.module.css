@@ -26,7 +26,7 @@
     background: #fff;
     width: 75%;
     margin: 2.5% auto 0;
-    z-index: -1;
+    z-index: 0;
 
 }
 .worksTitle{
@@ -44,6 +44,7 @@
     align-items: flex-start;
     gap: 3rem;
     padding: 20px 0;
+    z-index: 0;
 }
 
 .image{
@@ -64,9 +65,9 @@
 
 .moreButton{
     font-size: 2rem;
-    position: absolute;
-    right: -1rem;
-    bottom: -1rem;
+    display: block;
+    margin: 20px auto 0;
+    position: static;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -104,5 +105,48 @@
         max-width: 120px;
         height: auto;
         object-fit: cover;
+    }
+    .moreButton{
+        font-size: 1rem;
+        display: block;
+        margin: 10px auto 0;
+        position: static;
+    }
+}
+@media (max-width: 480px) {
+    .top {
+
+        padding: 80px 12.5px;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+
+    .bgimg {
+        position: absolute;
+        top: 1rem;
+        right: 0;
+        width: auto;
+        height: 400px;
+        z-index: -1;
+    }
+
+    .image {
+        width: 120px;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .worksItemTitle {
+        font-size: 1rem;
+        font-weight: bold;
+        margin-bottom: 0.1rem;
+    }
+    .moreButton {
+        font-size: 0.75rem;
+        display: block;
+        margin: 7.5px auto 0;
+        position: static;
     }
 }

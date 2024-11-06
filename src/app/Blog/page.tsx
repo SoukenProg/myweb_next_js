@@ -52,7 +52,7 @@ export default function Blogs() {
                   <ul>
                       {slices.map(( blogElms) => (
                           <li key={blogElms.id} className={styles.blogsList}>
-                                <Link href={`/news/${blogElms.id}`} className={styles.link}>
+                                <Link href={`/news/${blogElms.id}`} className={styles.link} passHref>
                                     <Image className={styles.image} src="/noImage.png" alt="No Image" width={1600} height={1200}/>
                                     <dl className={styles.content}>
                                         <dt className={styles.blogItemTitle}>{blogElms.title}</dt>

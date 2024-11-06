@@ -29,6 +29,9 @@
     z-index: -1;
 
 }
+.blogs ul {
+    padding-bottom: 20px;
+}
 .blogTitle{
     font-size: 2rem;
     text-align: center;
@@ -65,9 +68,9 @@
 
 .moreButton{
     font-size: 2rem;
-    position: absolute;
-    right: -1rem;
-    bottom: -1rem;
+    display: block;
+    margin: 20px auto 0;
+    position: static;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -110,5 +113,49 @@
         font-size: 1rem;
         font-weight: bold;
         margin-bottom: 0.3rem;
+    }
+    .moreButton{
+        font-size: 1rem;
+        display: block;
+        margin: 10px auto 0;
+        position: static;
+    }
+}
+@media (max-width: 480px) {
+    .top {
+
+        padding: 80px 12.5px;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+
+    .bgimg {
+        position: absolute;
+        top: 1rem;
+        right: 0;
+        width: auto;
+        height: 400px;
+        z-index: -1;
+    }
+
+    .image {
+        width: 120px;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .blogItemTitle {
+        font-size: 0.75rem;
+        font-weight: bold;
+        margin-bottom: 0.2rem;
+    }
+
+    .moreButton {
+        font-size: 0.75rem;
+        display: block;
+        margin: 7.5px auto 0;
+        position: static;
     }
 }

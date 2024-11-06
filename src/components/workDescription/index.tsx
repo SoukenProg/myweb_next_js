@@ -1,5 +1,5 @@
 import styles from "./index.module.css";
-import Image from "next/legacy/image";
+import Image from "next/image";
 import Button from "@/stories/Button/button";
 import Category from "@/components/Category";
 import Date from "@/components/Date";
@@ -52,20 +52,37 @@ export default function Works({work}: Props) {
     if(work.length === 0){
         return <p>No Work.</p>
     }
-    return(
-        <main className="flex min-h-screen flex-col items-center justify-between p-0">
+    return (
+        (<main className="flex min-h-screen flex-col items-center justify-between p-0">
             <div className={styles.top}>
                 <h1 className={styles.title}>Souken521.works</h1>
             </div>
-            <Image className={styles.bgimg} src="/works_BG.png" alt={""} width={4000} height={1200}/>
-
+            <Image
+                className={styles.bgimg}
+                src="/works_BG.png"
+                alt={""}
+                width={4000}
+                height={1200}
+                style={{
+                    maxWidth: "100%",
+                    height: "auto"
+                }} />
             <div className={styles.works}>
                 <h2 className={styles.worksTitle}>WORKS</h2>
                 <ul>
                     {work.map(( workElms) => (
                         <li key={workElms.id} className={styles.worksList}>
                             <div className={styles.link}>
-                                <Image className={styles.image} src="/noImage.png" alt="No Image" width={1600} height={1200}/>
+                                <Image
+                                    className={styles.image}
+                                    src="/noImage.png"
+                                    alt="No Image"
+                                    width={1600}
+                                    height={1200}
+                                    style={{
+                                        maxWidth: "100%",
+                                        height: "auto"
+                                    }} />
                                 <dl className={styles.content}>
                                     <dt className={styles.worksItemTitle}>{workElms.title}</dt>
                                     <dd className={styles.meta}>
@@ -84,6 +101,6 @@ export default function Works({work}: Props) {
             <h1>
                 (this is Works Page.)
             </h1>
-        </main>
+        </main>)
     );
 }

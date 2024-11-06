@@ -1,4 +1,4 @@
-import Image from "next/legacy/image";
+import Image from "next/image";
 import styles from "./index.module.css";
 
 type HeroProps = {
@@ -8,19 +8,21 @@ type HeroProps = {
 
 export const Hero = ({ imagePath, title }: HeroProps) => {
     return (
-        <div className={styles.heroContainer}>
+        (<div className={styles.heroContainer}>
             <Image
                 className={styles.bgimg}
                 src={imagePath}
                 alt=""
-                layout="fill"
-                objectFit="cover"
                 priority
-            />
+                fill
+                sizes="100vw"
+                style={{
+                    objectFit: "cover"
+                }} />
             <div>
                 <h1 className={styles.title}>{title}</h1>
             </div>
-        </div>
+        </div>)
     );
 };
 

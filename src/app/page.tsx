@@ -1,5 +1,5 @@
 import Button from "@/stories/Button/button";
-import Image from "next/legacy/image"
+import Image from "next/image"
 import styles from "./page.module.css"
 import Hero from "../components/Hero"
 export default function Home() {

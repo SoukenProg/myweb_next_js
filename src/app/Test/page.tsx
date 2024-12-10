@@ -1,8 +1,5 @@
-import styles from "@/app/works.module.css";
 import Gallery from "@/components/Gallery";
-import Hero from "@/components/Hero";
 import {works} from "@/app/libs/microcms_gallery";
-import Button from "@/stories/Button/button";
 
 const data:{
     work: works[]
@@ -38,22 +35,7 @@ const data:{
     ],
 };
 
-export default function Works() {
+export default function Test() {
     const slices = data.work.slice(0,2);
-    return (
-        <div>
-            <Hero imagePath={"/works_BG.png"} title={"Souken521.works"}/>
-
-            <div className={styles.works}>
-                <h2 className={styles.worksTitle}>WORKS</h2>
-
-            </div>
-            <div>
-                <Gallery work={slices} />
-            </div>
-            <div>
-                <Button className={styles.moreButton} href={'#'}>More</Button>
-            </div>
-        </div>
-    );
+    return <Gallery work={slices} />;
 }

@@ -1,4 +1,4 @@
-import type {Category} from "@/app/libs/microcms_works";
+import type {Category} from "@/app/libs/microcms_gallery";
 import styles from "./index.module.css"
 import {FC, memo} from "react";
 

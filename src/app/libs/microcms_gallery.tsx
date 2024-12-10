@@ -1,4 +1,4 @@
-export type workDescription = {
+export type works = {
     id: string;
     title: string;
     category: {

@@ -11,7 +11,7 @@ type Props ={
 export default function Gallery({work}: Props) {
 
     if(work.length === 0){
-        return <p>No Work.</p>
+        return <p>No Content(s).</p>
     }
     return (
             <div className={styles.container}>

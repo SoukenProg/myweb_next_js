@@ -2,7 +2,7 @@
     position: relative;
     width: 100%;
     min-height: 100vh; /* 必要に応じて画面全体をカバー */
-    overflow: hidden;
+    overflow: visible;
 }
 
 main {

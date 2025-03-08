@@ -1,10 +1,10 @@
 .top{
-    position: relative;
+    position: unset !important;
     display: flex;
     align-items: center;
     justify-content: center;
     color: #444;
-    overflow: hidden;
+    overflow: visible;
     padding: 200px 0;
 }
 .title{
@@ -22,12 +22,11 @@
     z-index: -1;
 }
 .blogs{
-    position: relative;
+    transform: none !important;
     background: #fff;
     width: 75%;
     margin: 2.5% auto 0;
-    z-index: -1;
-
+    z-index: 0;
 }
 .blogs ul {
     padding-bottom: 20px;

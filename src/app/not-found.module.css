@@ -4,7 +4,7 @@
     align-items: center;
     justify-content: center;
     color: #444;
-    overflow: hidden;
+    overflow: visible;
     padding: 200px 0;
 }
 .title{

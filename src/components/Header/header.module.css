@@ -1,0 +1,6 @@
+.menu {
+    position: fixed !important;
+    z-index: 99999 !important;
+    top: 0;
+    right: 0;
+}

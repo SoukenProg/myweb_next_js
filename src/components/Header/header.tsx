@@ -2,6 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import BurgerMenu from "@/components/burgerMenu/burgerMenu";
+import styles from  "./header.module.css"
 export const Header = () => {
     return (
         // <header className="flex items-center m-3">
@@ -21,12 +22,12 @@ export const Header = () => {
         (<header className="w-full bg-white sticky top-0 py-1 dark:bg-black dark:text-white">
             <div className="hidden md:flex justify-between min-w-3xl items-center mx-3">
                 <div className="flex md:flex-1 mr-auto items-center gap-3">
-                    <Link href="/" className="text-5xl">
+                    <Link href="/public" className="text-5xl">
                         Souken521
                     </Link>
                 </div>
                 <div className="flex mx-4 md:flex-1 md:gap-x-12 justify-end">
-                    <Link href="/" className="font-semibold">Home</Link>
+                    <Link href="/public" className="font-semibold">Home</Link>
                     <Link href="/About" className="font-semibold">About</Link>
                     <Link href="/Works" className="font-semibold">Works</Link>
                     <Link href="/Blog" className="font-semibold">Blog</Link>
@@ -35,11 +36,11 @@ export const Header = () => {
             </div>
             <div className="md:hidden flex  bg-white dark:bg-black justify-between max-w-3xl items-center mx-3">
                 <div>
-                    <Link href="/" className="text-4xl">
+                    <Link href="/public" className="text-4xl">
                         Souken521
                     </Link>
                 </div>
-                <div className="text-xl font-bold　items-center">
+                <div className="text-xl font-bold　items-center ${styles.menu}" >
                     <BurgerMenu />
                 </div>
             </div>

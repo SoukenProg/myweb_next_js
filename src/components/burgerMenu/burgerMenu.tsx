@@ -12,7 +12,7 @@ export default function BurgerMenu() {
     }
 
     return (
-        <div id="outer-container">
+        <div id="outer-container" className={styles.outer}>
             <main className={cx(styles.nav, openMenu && styles.open)} id="page-wrap">
                 <ul className={styles.navList}>
                     <div className={styles.top} onClick={menuFunction}>

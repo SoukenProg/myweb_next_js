@@ -7,6 +7,7 @@ import {blogDescription} from "@/app/libs/microcms_blogs";
 import Category from "@/components/Category";
 import Date from "@/components/Date";
 import Hero from "@/components/Hero";
+import Gallery from "@/components/Gallery";
 
 const blogs:{
     blogList: blogDescription[]
@@ -49,38 +50,11 @@ export default function Blogs() {
             <Hero imagePath={"/blog_BG.png"} title={"Souken521.Blog"} />
             <div className={styles.blogs}>
                 <h2 className={styles.blogTitle}>ARTICLES</h2>
-                <ul>
-                    {slices.map(( blogElms) => (
-                        <li key={blogElms.id} className={styles.blogsList}>
-                              <Link href={`/news/${blogElms.id}`} className={styles.link} passHref>
-                                  <Image
-                                      className={styles.image}
-                                      src="/noImage.png"
-                                      alt="No Image"
-                                      width={1600}
-                                      height={1200}
-                                      style={{
-                                          maxWidth: "100%",
-                                          height: "auto"
-                                      }} />
-                                  <dl className={styles.content}>
-                                      <dt className={styles.blogItemTitle}>{blogElms.title}</dt>
-                                          <dd className={styles.meta}>
-                                              <Category category={blogElms.category} />
-                                              <Date date={blogElms.releasedate} />
-                                          </dd>
-                                  </dl>
-                              </Link>
-                        </li>
-                    ))}
-                </ul>
+                    <Gallery work={slices}/>
                 <div>
                     <Button className={styles.moreButton} href={'#'}>More</Button>
                 </div>
             </div>
-            <h1>
-                (this is Blog Page.)
-            </h1>
         </main>)
     );
 }

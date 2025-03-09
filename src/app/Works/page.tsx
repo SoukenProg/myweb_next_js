@@ -37,7 +37,9 @@ const data:{
         },
     ],
 };
-
+interface MenuProps {
+    isMenuOpen?: boolean;
+}
 export default function Works() {
     const slices = data.work.slice(0,2);
     return (
@@ -49,7 +51,7 @@ export default function Works() {
 
             </div>
             <div>
-                <Gallery work={slices}/>
+                <Gallery  work={slices} />
             </div>
             <div>
                 <Button className={styles.moreButton} href={'#'}>More</Button>

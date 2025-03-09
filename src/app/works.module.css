@@ -49,7 +49,6 @@
     align-items: flex-start;
     gap: 3rem;
     padding: 20px 0;
-    pointer-events: auto;
     z-index: 7;
 }
 

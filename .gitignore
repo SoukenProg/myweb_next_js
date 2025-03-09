@@ -173,3 +173,6 @@ dist
 
 
 *storybook.log
+
+*.zip
+/source/*

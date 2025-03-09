@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import MenuProviderWrapper from "@/components/MenuProviderWrapper/MenuProviderWrapper";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header/header"
@@ -16,15 +17,15 @@ type Props = {
 }
 
 const RootLayout = ({ children }: Props) => {
-    return (
-        <html lang="ja">
-        <body>
-        <Header />
-        {children}
-        <Footer />
-        </body>
-
-        </html>
+    return (<MenuProviderWrapper>
+                <html lang="ja">
+                <body>
+                    <Header />
+                    {children}
+                    <Footer />
+                </body>
+                </html>
+        </MenuProviderWrapper>
     )
 }
 

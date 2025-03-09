@@ -5,9 +5,6 @@ export default function Home() {
       <div className="italic max-w-5xl w-full items-center justify-between font-mono text-m lg:flex">
         Coming Soon... <br/>
       </div>
-          <h1>
-              (this is Contact Page.)
-          </h1>
 
     </main>
   );

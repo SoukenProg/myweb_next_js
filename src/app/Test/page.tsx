@@ -37,5 +37,5 @@ const data:{
 
 export default function Test() {
     const slices = data.work.slice(0,2);
-    return <Gallery work={slices} />;
+    return <Gallery work={slices}　isOpen={true} />;
 }

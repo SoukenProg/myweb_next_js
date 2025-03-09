@@ -3,17 +3,27 @@ import { useState } from 'react';
 import Link from "next/link";
 import styles from './burgerMenu.module.css';
 import cx from 'classnames';
+import Works from '@/app/Works/page'
+import Blogs from '@/app/Blog/page'
+import useMenu  from "@/context/MenuContext";
+import {useEffect, useRef} from "react";
+
 
 export default function BurgerMenu() {
-    const [openMenu, setOpenMenu] = useState(false);
+    const { isMenuOpen, setIsMenuOpen } = useMenu();
 
     const menuFunction = () => {
-        setOpenMenu(!openMenu);
+        console.log("menuFunction called");
+        setIsMenuOpen(!isMenuOpen);
+
     }
+    useEffect(() => {
+        console.log("Header: isMenuOpen changed to", isMenuOpen);
+    }, [isMenuOpen]);
 
     return (
         <div id="outer-container" className={styles.outer}>
-            <main className={cx(styles.nav, openMenu && styles.open)} id="page-wrap">
+            <main className={cx(styles.nav, isMenuOpen && styles.open)} id="page-wrap">
                 <ul className={styles.navList}>
                     <div className={styles.top} onClick={menuFunction}>
                         <button>Close</button>

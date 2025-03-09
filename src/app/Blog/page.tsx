@@ -42,8 +42,10 @@ const blogs:{
         },
     ],
 };
-
-export default function Blogs() {
+interface MenuProps {
+    isMenuOpen: boolean;
+}
+export default function Blogs({isMenuOpen}: MenuProps) {
     const slices = blogs.blogList.slice(0,2);
     return (
         (
@@ -54,7 +56,7 @@ export default function Blogs() {
 
             </div>
             <div>
-                <Gallery work={slices}/>
+                <Gallery work={slices} isOpen={isMenuOpen} />
             </div>
             <div>
                 <Button className={styles.moreButton} href={'#'}>More</Button>

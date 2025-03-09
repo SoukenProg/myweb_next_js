@@ -41,7 +41,7 @@ const data:{
 export default function Works() {
     const slices = data.work.slice(0,2);
     return (
-        <div>
+        <>
             <Hero imagePath={"/works_BG.png"} title={"Souken521.works"}/>
 
             <div className={styles.works}>
@@ -54,6 +54,6 @@ export default function Works() {
             <div>
                 <Button className={styles.moreButton} href={'#'}>More</Button>
             </div>
-        </div>
+        </>
     );
 }

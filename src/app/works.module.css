@@ -80,10 +80,7 @@
 .empty{
     margin-bottom: 20px;
 }
-.gallery {
-    position: relative;
-    will-change: transform;
-}
+
 
 @media (prefers-color-scheme: dark) {
     .top{

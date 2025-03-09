@@ -46,15 +46,20 @@ const blogs:{
 export default function Blogs() {
     const slices = blogs.blogList.slice(0,2);
     return (
-        (<main className="flex min-h-screen flex-col items-center justify-between p-0">
+        (
+            <>
             <Hero imagePath={"/blog_BG.png"} title={"Souken521.Blog"} />
             <div className={styles.blogs}>
                 <h2 className={styles.blogTitle}>ARTICLES</h2>
-                    <Gallery work={slices}/>
-                <div>
-                    <Button className={styles.moreButton} href={'#'}>More</Button>
-                </div>
+
             </div>
-        </main>)
+            <div>
+                <Gallery work={slices}/>
+            </div>
+            <div>
+                <Button className={styles.moreButton} href={'#'}>More</Button>
+            </div>
+        </>
+       )
     );
 }

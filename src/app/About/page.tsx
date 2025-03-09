@@ -1,9 +1,10 @@
+import styles from "./about.module.css"
 import Hero from "@/components/Hero";
 const AboutSouken = () => {
     return (
         <div>
             <Hero imagePath={"/About_BG.png"} title={"ABOUT Souken521"} />
-            <div>
+            <div className={styles.text}>
                 <ul>
                     <li>
                         <p>2000年5月生まれ。</p>

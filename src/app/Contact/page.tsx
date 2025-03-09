@@ -1,11 +1,13 @@
-
+import styles from "./contact.module.css"
+import Hero from "@/components/Hero";
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="italic max-w-5xl w-full items-center justify-between font-mono text-m lg:flex">
+    <>
+        <Hero imagePath={"/Contact_BG.png"} title={"Contact to Souken521"}></Hero>
+      <div className={styles.text}>
         Coming Soon... <br/>
       </div>
 
-    </main>
+    </>
   );
 }

@@ -1,4 +1,4 @@
-import styles from "@/app/works.module.css";
+import styles from "./works.module.css";
 import Gallery from "@/components/Gallery";
 import Hero from "@/components/Hero";
 import {works} from "@/app/libs/microcms_gallery";
@@ -37,9 +37,7 @@ const data:{
         },
     ],
 };
-interface MenuProps {
-    isMenuOpen?: boolean;
-}
+
 export default function Works() {
     const slices = data.work.slice(0,2);
     return (
@@ -51,7 +49,7 @@ export default function Works() {
 
             </div>
             <div>
-                <Gallery  work={slices} />
+                <Gallery  work={slices}  />
             </div>
             <div>
                 <Button className={styles.moreButton} href={'#'}>More</Button>

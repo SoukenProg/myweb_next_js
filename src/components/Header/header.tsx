@@ -27,7 +27,7 @@ export const Header = () => {
                     </Link>
                 </div>
                 <div className="flex mx-4 md:flex-1 md:gap-x-12 justify-end">
-                    <Link href="/public" className="font-semibold">Home</Link>
+                    <Link href="/" className="font-semibold">Home</Link>
                     <Link href="/About" className="font-semibold">About</Link>
                     <Link href="/Works" className="font-semibold">Works</Link>
                     <Link href="/Blog" className="font-semibold">Blog</Link>

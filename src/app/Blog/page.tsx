@@ -1,4 +1,4 @@
-import styles from "@/app/blog.module.css";
+import styles from "./blog.module.css";
 import Image from "next/image";
 import Link from "next/link";
 import {useRouter} from "next/router";
@@ -42,10 +42,8 @@ const blogs:{
         },
     ],
 };
-interface MenuProps {
-    isMenuOpen: boolean;
-}
-export default function Blogs({isMenuOpen}: MenuProps) {
+
+export default function Blog() {
     const slices = blogs.blogList.slice(0,2);
     return (
         (
@@ -56,7 +54,7 @@ export default function Blogs({isMenuOpen}: MenuProps) {
 
             </div>
             <div>
-                <Gallery work={slices} isOpen={isMenuOpen} />
+                <Gallery work={slices} />
             </div>
             <div>
                 <Button className={styles.moreButton} href={'#'}>More</Button>

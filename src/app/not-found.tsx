@@ -1,6 +1,6 @@
 import styles from "@/app/not-found.module.css";
 import Image from "next/image";
-import Hero from "../components/Hero";
+import Hero from '@/components/Hero';
 
 export const NotFound =  () => {
 

@@ -21,7 +21,9 @@
     height: 600px;
     z-index: -1;
 }
-
+.text{
+    text-align: center;
+}
 @media (max-width: 640px) {
     .top{
 

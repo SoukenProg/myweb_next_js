@@ -1,21 +1,21 @@
+
 import styles from "./blog.module.css";
 import Image from "next/image";
 import Link from "next/link";
-import {useRouter} from "next/router";
 import Button from "@/stories/Button/button";
-import {blogDescription} from "@/app/libs/microcms_blogs";
+import { blogDescription } from "@/app/libs/microcms_blogs";
 import Category from "@/components/Category";
 import Date from "@/components/Date";
 import Hero from "@/components/Hero";
 import Gallery from "@/components/Gallery";
 
-const blogs:{
+const blogs: {
     blogList: blogDescription[]
-} ={
+} = {
     blogList: [
         {
-            id:"0",
-            title:"テスト0",
+            id: "0",
+            title: "テスト0",
             category: {
                 name: "テスト",
             },
@@ -23,8 +23,8 @@ const blogs:{
             releasedate: "2024-11-01",
         },
         {
-            id:"1",
-            title:"テスト1",
+            id: "1",
+            title: "テスト1",
             category: {
                 name: "テスト",
             },
@@ -32,8 +32,8 @@ const blogs:{
             releasedate: "2024-11-02",
         },
         {
-            id:"2",
-            title:"テスト2",
+            id: "2",
+            title: "テスト2",
             category: {
                 name: "テスト",
             },
@@ -44,22 +44,22 @@ const blogs:{
 };
 
 export default function Blog() {
-    const slices = blogs.blogList.slice(0,2);
+    const slices = blogs.blogList.slice(0, 2);
     return (
         (
             <>
-            <Hero imagePath={"/blog_BG.png"} title={"Souken521.Blog"} />
-            <div className={styles.blogs}>
-                <h2 className={styles.blogTitle}>ARTICLES</h2>
+                <Hero imagePath={"/blog_BG.png"} title={"Souken521.Blog"} />
+                <div className={styles.blogs}>
+                    <h2 className={styles.blogTitle}>ARTICLES</h2>
 
-            </div>
-            <div>
-                <Gallery work={slices} />
-            </div>
-            <div>
-                <Button className={styles.moreButton} href={'#'}>More</Button>
-            </div>
-        </>
-       )
+                </div>
+                <div>
+                    <Gallery work={slices} />
+                </div>
+                <div>
+                    <Button className={styles.moreButton} href={'#'}>More</Button>
+                </div>
+            </>
+        )
     );
 }
